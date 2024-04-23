@@ -1,0 +1,68 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* --------------- FONTS --------------- */
+
+@font-face {
+  font-family: "cofo-sans-bold";
+  src: url("assets/fonts/cofo-sans/CoFoSans-Bold.eot");
+  src: local("CoFo Sans Bold"), local("CoFoSans-Bold"),
+    url("assets/fonts/cofo-sans/CoFoSans-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/cofo-sans/CoFoSans-Bold.woff2") format("woff2"),
+    url("assets/fonts/cofo-sans/CoFoSans-Bold.woff") format("woff"),
+    url("assets/fonts/cofo-sans/CoFoSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cofo-sans-black";
+  src: url("assets/fonts/cofo-sans/CoFoSans-Black.eot");
+  src: local("CoFo Sans Black"), local("CoFoSans-Black"),
+    url("assets/fonts/cofo-sans/CoFoSans-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/cofo-sans/CoFoSans-Black.woff2") format("woff2"),
+    url("assets/fonts/cofo-sans/CoFoSans-Black.woff") format("woff"),
+    url("assets/fonts/cofo-sans/CoFoSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cofo-sans-regular";
+  src: url("assets/fonts/cofo-sans/CoFoSans-Regular.eot");
+  src: local("CoFo Sans"), local("CoFoSans-Regular"),
+    url("assets/fonts/cofo-sans/CoFoSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/cofo-sans/CoFoSans-Regular.woff2") format("woff2"),
+    url("assets/fonts/cofo-sans/CoFoSans-Regular.woff") format("woff"),
+    url("assets/fonts/cofo-sans/CoFoSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cofo-sans-bold {
+  font-family: "cofo-sans";
+}
+
+.cofo-sans-black {
+  font-family: "cofo-sans-black";
+}
+
+.cofo-sans-regular {
+  font-family: "cofo-sans-regular";
+}
+
+.max-container {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.default-container {
+  max-width: 92%;
+  margin-right: auto;
+  margin-left: auto;
+}
