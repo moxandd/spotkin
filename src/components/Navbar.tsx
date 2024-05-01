@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className="logo | bg-purple-600 p-[0.5rem] rounded-full">
             <img src={logo} alt="logo-image" />
           </div>
-          <nav className="navigation | lg:flex-grow lg:bg-[#F7F7F7] lg:rounded-full -z-[100] pr-[1rem]">
+          <nav className="navigation | lg:flex-grow lg:bg-[#F7F7F7] lg:rounded-full -z-[0] pr-[1rem]">
             <div className="mobile-navigation | lg:hidden">
               <div className="mobile-icons | flex gap-[0.5rem] flex-row-reverse">
                 <div className="icon-block | bg-[#F7F7F7] p-[0.75rem] rounded-full">
@@ -53,18 +53,18 @@ const Navbar = () => {
             </div>
             <div className="desktop-navigation | hidden lg:flex lg:items-center">
               <ul className="nav-links | flex gap-[1rem] flex-grow items-center">
-                <li className="nav-item text-white">
-                  <div className="nav-link-title relative bg-[#17C4AF] rounded-t-3xl p-[0.5rem] py-[0.7em] z-50">
-                    <a className="nav-link |" href="">
+                <li className="nav-item text-white group">
+                  <div className="nav-link-title relative text-black hover:text-white group-hover:bg-[#17C4AF] rounded-t-3xl p-[0.5rem] py-[0.7em] transition-all">
+                    <a className="nav-link | " href="#">
                       КАТЕГОРИЯ 1
                     </a>
                     <img
-                      className="h-[3rem] w-[2rem] absolute top-[0.2rem] left-[6.9rem] -z-10"
+                      className="transition-all opacity-0 group-hover:opacity-100 h-[3rem] w-[2rem] absolute top-[0.75rem] left-[6.9rem] -z-10"
                       src={corner}
                       alt=""
                     />
                   </div>
-                  <div className="nav-link-dropdown | absolute top-[3.35rem] bg-[#17C4AF] rounded-b-2xl rounded-tr-xl p-[0.5rem] pt-[0.75rem]">
+                  <div className="nav-link-dropdown | transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto absolute top-[3.35rem] bg-[#17C4AF] rounded-b-2xl rounded-tr-xl p-[0.5rem] pt-[0.75rem] mt-[0.55rem]">
                     <ul className="dropdown-list | ">
                       <li className="dropdown-list-item | ">
                         <a className="dropdown-list-link" href="#">
@@ -84,7 +84,131 @@ const Navbar = () => {
                     </ul>
                   </div>
                 </li>
-                <li className="nav-link">
+                <li className="nav-item text-white group">
+                  <div className="nav-link-title relative text-black hover:text-white group-hover:bg-[#17C4AF] rounded-t-3xl p-[0.5rem] py-[0.7em] transition-all">
+                    <a className="nav-link | " href="#">
+                      КАТЕГОРИЯ 2
+                    </a>
+                    <img
+                      className="transition-all opacity-0 group-hover:opacity-100 h-[3rem] w-[2rem] absolute top-[0.75rem] left-[6.9rem] -z-10"
+                      src={corner}
+                      alt=""
+                    />
+                  </div>
+                  <div className="nav-link-dropdown | transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto absolute top-[3.35rem] bg-[#17C4AF] rounded-b-2xl rounded-tr-xl p-[0.5rem] pt-[0.75rem] mt-[0.55rem]">
+                    <ul className="dropdown-list | ">
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 1
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 2
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 3
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-item text-white group">
+                  <div className="nav-link-title relative text-black hover:text-white group-hover:bg-[#17C4AF] rounded-t-3xl p-[0.5rem] py-[0.7em] transition-all">
+                    <a className="nav-link | " href="#">
+                      КАТЕГОРИЯ 3
+                    </a>
+                    <img
+                      className="transition-all opacity-0 group-hover:opacity-100 h-[3rem] w-[2rem] absolute top-[0.75rem] left-[6.9rem] -z-10"
+                      src={corner}
+                      alt=""
+                    />
+                  </div>
+                  <div className="nav-link-dropdown | transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto absolute top-[3.35rem] bg-[#17C4AF] rounded-b-2xl rounded-tr-xl p-[0.5rem] pt-[0.75rem] mt-[0.55rem]">
+                    <ul className="dropdown-list | ">
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 1
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 2
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 3
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-item text-white group">
+                  <div className="nav-link-title relative text-black hover:text-white group-hover:bg-[#17C4AF] rounded-t-3xl p-[0.5rem] py-[0.7em] transition-all">
+                    <a className="nav-link | " href="#">
+                      КАТЕГОРИЯ 4
+                    </a>
+                    <img
+                      className="transition-all opacity-0 group-hover:opacity-100 h-[3rem] w-[2rem] absolute top-[0.75rem] left-[6.9rem] -z-10"
+                      src={corner}
+                      alt=""
+                    />
+                  </div>
+                  <div className="nav-link-dropdown | transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto absolute top-[3.35rem] bg-[#17C4AF] rounded-b-2xl rounded-tr-xl p-[0.5rem] pt-[0.75rem] mt-[0.55rem]">
+                    <ul className="dropdown-list | ">
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 1
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 2
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 3
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="nav-item text-white group">
+                  <div className="nav-link-title relative text-black hover:text-white group-hover:bg-[#17C4AF] rounded-t-3xl p-[0.5rem] py-[0.7em] transition-all">
+                    <a className="nav-link | " href="#">
+                      КАТЕГОРИЯ 5
+                    </a>
+                    <img
+                      className="transition-all opacity-0 group-hover:opacity-100 h-[3rem] w-[2rem] absolute top-[0.75rem] left-[6.9rem] -z-10"
+                      src={corner}
+                      alt=""
+                    />
+                  </div>
+                  <div className="nav-link-dropdown | transition-all opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto absolute top-[3.35rem] bg-[#17C4AF] rounded-b-2xl rounded-tr-xl p-[0.5rem] pt-[0.75rem] mt-[0.55rem]">
+                    <ul className="dropdown-list | ">
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 1
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 2
+                        </a>
+                      </li>
+                      <li className="dropdown-list-item | ">
+                        <a className="dropdown-list-link" href="#">
+                          ПОДКАТЕГОРИЯ 3
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                {/* <li className="nav-link">
                   <a href="">КАТЕГОРИЯ 2</a>
                 </li>
                 <li className="nav-link">
@@ -95,7 +219,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-link">
                   <a href="">КАТЕГОРИЯ 5</a>
-                </li>
+                </li> */}
               </ul>
               <div className="icon-block | rounded-full">
                 <img src={searchIcon} alt="search-icon" />
