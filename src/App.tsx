@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import PostPage from "./pages/PostPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
               <Navbar></Navbar>
               <Routes>
                 <Route path="/" element={<Homepage />}></Route>
+                <Route path="/posts/:id" element={<PostPage />}></Route>
               </Routes>
               <Footer />
             </div>
