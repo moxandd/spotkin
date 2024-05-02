@@ -7,14 +7,7 @@ interface PostType {
   id: string;
 }
 
-interface HomepageProps {
-  search: string;
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const Homepage: React.FC<HomepageProps> = ({ search, setSearch }) => {
-  console.log(search);
-
+const PostsByCategory = () => {
   const [posts, setPosts] = useState<PostType[]>([
     {
       title: "Куда сходить вечером в столице",
@@ -101,16 +94,13 @@ const Homepage: React.FC<HomepageProps> = ({ search, setSearch }) => {
         <div className="homepage-inner">
           <section className="blog">
             <div className="blog-container">
+              <h1 className="section-title | title cofo-sans-bold mb-[1rem]">
+                ТЕХНОЛОГИИ
+              </h1>
               <div className="blog-inner-grid grid grid-cols-1 gap-[1.25em] md:grid-cols-2 md:[&>*:first-child]:col-span-2 lg:grid-cols-3 lg:[&>*:first-child]:row-span-2 lg:gap-[2em]">
-                {posts
-                  .filter((post) => {
-                    return search.toLocaleLowerCase() === ''
-                      ? post
-                      : post.title.toLowerCase().includes(search);
-                  })
-                  .map((post) => (
-                    <Post key={post.id} post={post} />
-                  ))}
+                {posts.map((post) => (
+                  <Post key={post.id} post={post} />
+                ))}
               </div>
             </div>
             {isFetching && <p className="text-center mt-[2rem]">Загрузка...</p>}
@@ -121,4 +111,4 @@ const Homepage: React.FC<HomepageProps> = ({ search, setSearch }) => {
   );
 };
 
-export default Homepage;
+export default PostsByCategory;

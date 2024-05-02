@@ -1,5 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import TableOfContents from "../components/TableOfContents";
+import InternalAdvertisement from "../components/InternalAdvertisement";
+import Advertisement from "../components/Advertisement";
+import adImage from "../assets/images/post-image.png";
+import adImage2 from "../assets/images/post-image3.jpg";
 
 const PostPage = () => {
   const { id } = useParams();
@@ -32,34 +37,34 @@ const PostPage = () => {
   ]);
   const post = posts[id];
 
+  const headers = [
+    { id: "introduction", title: "Начало" },
+    { id: "chapter1", title: "Глава 1" },
+    { id: "chapter2", title: "Глава 2" },
+    { id: "chapter3", title: "Глава 3" },
+    { id: "chapter4", title: "Глава 4" },
+    { id: "chapter5", title: "Глава 5" },
+    { id: "conclusion", title: "Завершение" },
+    // ... other header sections
+  ];
+
   return (
     <div className="post-page-wrapper | flex-grow my-[2rem]">
       <div className="post-page-container | default-container">
         <div className="post-page-inner | ">
           <div className="post-page-grid | grid lg:grid-cols-6 lg:gap-[2rem]">
-            <div className="post-sidebar | hidden lg:grid lg:col-span-1 ">
+            <div className="post-sidebar | hidden lg:grid lg:col-span-1">
               <div className="advertisement-block | max-h-[23rem]">
                 {/* <Advertisement></Advertisement> */}
-              </div>
-              <div className="post-navigation | flex flex-col gap-[0.5rem]">
-                <h3 className="subtitle bg-purple-300 rounded-xl py-[0.25rem] px-[0.75rem]">
-                  Начало
-                </h3>
-                <h3 className="subtitle active bg-green-300 rounded-xl py-[0.25rem] px-[0.75rem]">
-                  Заголовок длинный очень длинный да мне лень его придумать
-                </h3>
-                <h3 className="subtitle bg-purple-300 rounded-xl py-[0.25rem] px-[0.75rem]">
-                  Начало
-                </h3>
-                <h3 className="subtitle bg-purple-300 rounded-xl py-[0.25rem] px-[0.75rem]">
-                  Начало
-                </h3>
+                <TableOfContents headers={headers} />
               </div>
             </div>
             <div className="post-main-content | flex flex-col gap-[1rem] lg:col-span-4 ">
               <div className="post-title-block | flex flex-col gap-[0.25rem]">
                 <div className="post-category | ">КУЛЬТУРА, ПОДКАТЕГОРИЯ</div>
-                <div className="post-title | title ">{post.title}</div>
+                <div className="post-title | title cofo-sans-black lg:text-[1.5rem] ">
+                  {post.title}
+                </div>
                 <div className="post-credentials | flex justify-between text-[#818181]">
                   <div className="post-author |">Иванов Иван</div>
                   <div className="post-date | ">10 марта, 2024</div>
@@ -121,12 +126,22 @@ const PostPage = () => {
               </div>
             </div>
             <div className="post-page-ads-sidebar | hidden lg:flex lg:flex-col lg:col-span-1  gap-[1.5rem]">
-              <div className="add-block | ">
-                {/* <InternalAdvertisement></InternalAdvertisement> */}
+              <div className="add-block | flex flex-col gap-[1rem]">
+                <InternalAdvertisement
+                  image={adImage}
+                  link="/"
+                  title="Читай уникальные посты в нашем Telegram канале"
+                ></InternalAdvertisement>
+                <div className="add-block | min-h-[19rem]">
+                  <Advertisement></Advertisement>
+                </div>
+                <InternalAdvertisement
+                  image={adImage2}
+                  link="/"
+                  title="Читай уникальные посты в нашем Telegram канале"
+                ></InternalAdvertisement>
               </div>
-              <div className="add-block | min-h-[19rem]">
-                {/* <Advertisement></Advertisement> */}
-              </div>
+
               <div className="add-block | ">
                 {/* <InternalAdvertisement></InternalAdvertisement> */}
               </div>

@@ -2,9 +2,14 @@
 interface SearchModalProps {
   isVisible: boolean;
   onClose: () => void;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const SearchModal: React.FC<SearchModalProps> = ({ isVisible, onClose }) => {
+const SearchModal: React.FC<SearchModalProps> = ({
+  isVisible,
+  onClose,
+  setSearch,
+}) => {
   if (!isVisible) return null;
 
   const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -18,6 +23,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isVisible, onClose }) => {
     >
       <div className="searchbar | relative w-[80vw]  md:w-[50vw] text-white top-[15%]">
         <input
+          onChange={(e) => setSearch(e.target.value)}
           id="searchbar"
           className="border-2 border-white bg-black rounded-lg px-[1rem] py-[1.25rem] w-full"
           type="search"

@@ -9,7 +9,12 @@ import { useEffect } from "react";
 import SearchModal from "./SearchModal";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+interface NavbarProps {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ search, setSearch }) => {
   const [showModal, setShowModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -227,6 +232,7 @@ const Navbar = () => {
       <SearchModal
         isVisible={showModal}
         onClose={() => setShowModal(false)}
+        setSearch={setSearch}
       ></SearchModal>
     </div>
   );
